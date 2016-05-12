@@ -28,12 +28,16 @@ class ProductsScreen < PM::TableScreen
         {
           height: 100,
           title: product.title,
+          remote_image: {
+            url: product.image_url,
+          },
           action: :view_product,
           arguments: { product: product }
         }
       end
     }]
   end
+
 
   # You don't have to reapply styles to all UIViews, if you want to optimize, another way to do it
   # is tag the views you need to restyle in your stylesheet, then only reapply the tagged views, like so:
