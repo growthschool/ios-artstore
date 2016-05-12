@@ -6,5 +6,9 @@ class ApiClient
       end
     end
 
+    def update_authorization_header(header)
+      client.headers["Authorization"] = header
+    end
+    
   end
 end
