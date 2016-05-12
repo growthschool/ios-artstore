@@ -2,6 +2,12 @@ class SignInScreen < PM::XLFormScreen
   title "Sign In"
   stylesheet SignInScreenStylesheet
 
+  form_options on_cancel: :cancel_form
+
+  def cancel_form
+    app.delegate.open_authenticated_root
+  end
+
   def form_data
     [
       {

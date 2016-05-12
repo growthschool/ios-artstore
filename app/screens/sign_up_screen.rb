@@ -2,6 +2,14 @@ class SignUpScreen < PM::XLFormScreen
   title "Sign Up"
   stylesheet SignUpScreenStylesheet
 
+
+ form_options on_cancel: :cancel_form
+
+ def cancel_form
+   app.delegate.open_authenticated_root
+ end
+
+
   def form_data
     [
       {
