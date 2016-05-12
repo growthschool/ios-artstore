@@ -16,6 +16,8 @@ gem "ProMotion-XLForm"
 
 gem 'ProMotion-menu'
 
+gem 'moticons'
+
 # Optional
 
 # gem "ProMotion-XLForm"

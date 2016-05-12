@@ -81,6 +81,8 @@ GEM
       bundler
     minitest (5.8.4)
     molinillo (0.4.5)
+    moticons (1.0.0)
+      motion-cocoapods
     motion-cocoapods (1.8.0)
       cocoapods (>= 1.0.0)
     motion-keychain (0.0.1)
@@ -124,6 +126,7 @@ DEPENDENCIES
   ProMotion-menu
   afmotion
   cdq
+  moticons
   motion-authentication!
   motion-cocoapods
   motion-yaml (= 1.4)

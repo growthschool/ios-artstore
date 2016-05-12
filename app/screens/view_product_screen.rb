@@ -8,12 +8,12 @@ class ViewProductScreen < PM::Screen
     append(UIImageView, :product_image).style {|st| st.remote_image = product.image_url }
 
     set_toolbar_items [{
-        title: "加入購物車",
+        title: icon_image(:awesome, :shopping_cart, size: 20) ,
         action: :some_action
       }, {
         system_item: :flexible_space
       }, {
-        title: "加入最愛",
+        title: icon_image(:awesome, :heart_o, size: 20) ,
         action: :some_other_action
     }]
 
@@ -24,7 +24,7 @@ class ViewProductScreen < PM::Screen
 
   def some_other_action
   end
-    
+
 
   # You don't have to reapply styles to all UIViews, if you want to optimize, another way to do it
   # is tag the views you need to restyle in your stylesheet, then only reapply the tagged views, like so:
