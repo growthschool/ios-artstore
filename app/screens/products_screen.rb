@@ -20,11 +20,6 @@ class ProductsScreen < PM::TableScreen
     app_delegate.show_menu
   end
 
-  def sign_out_button
-    Auth.sign_out do
-      open_tab_bar ProductsScreen.new(nav_bar: true)
-    end
-  end
 
   def sign_in_button
     open SignInScreen.new(nav_bar: true)

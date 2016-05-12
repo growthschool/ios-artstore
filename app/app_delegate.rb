@@ -14,7 +14,7 @@ class AppDelegate < PM::Delegate
     end  
     
     open_authenticated_root
-    @menu = open MenuDrawer
+    
   end
 
   def show_menu
@@ -24,6 +24,7 @@ class AppDelegate < PM::Delegate
 
   def open_authenticated_root
     open_tab_bar ProductsScreen.new(nav_bar: true)
+    @menu = open MenuDrawer
   end
 
   def open_un_authenticated_root
