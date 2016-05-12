@@ -18,6 +18,8 @@ Motion::Project::App.setup do |app|
   #app.version = (`git rev-list HEAD --count`.strip.to_i).to_s
   app.version = app.short_version
 
+  app.info_plist['NSAppTransportSecurity'] = { 'NSAllowsArbitraryLoads' => true } # allow any HTTP request
+  
   # RubyMotion by default selects the latest SDK you have installed,
   # if you would like to specify the SDK to assure consistency across multiple machines,
   # you can do so like the following examples
