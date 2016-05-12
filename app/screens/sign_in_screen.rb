@@ -39,7 +39,8 @@ class SignInScreen < PM::XLFormScreen
         ApiClient.update_authorization_header(Auth.authorization_header)
         app.delegate.open_authenticated_root
       elsif response.object
-        app.alert response.object["error"]
+        puts response.object
+        app.alert "#{response.object['error']['message']} (#{response.object['error']['code']})"
       else
         app.alert "Sorry, there was an error. #{response.error.localizedDescription}"
       end
