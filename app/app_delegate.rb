@@ -8,7 +8,9 @@ class AppDelegate < PM::Delegate
   ApplicationStylesheet.new(nil).application_setup
 
   def on_load(app, options)
-    open_tab_bar ProductsScreen.new(nav_bar: true)
+    # open_tab_bar ProductsScreen.new(nav_bar: true)
+    open SignInScreen.new(nav_bar: true)
+    
   end
 
   # Remove this if you are only supporting portrait

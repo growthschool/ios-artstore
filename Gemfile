@@ -3,12 +3,17 @@ source "https://rubygems.org"
 gem "rake"
 gem "motion-cocoapods"
 gem "redpotion"
+gem "ProMotion", :github => "infinitered/ProMotion"
 gem "cdq" # Core Data
 gem "motion-yaml", "1.4" # Version 1.5 breaks CDQ
 gem "afmotion" # Networking
 
 # Debugging tools
 gem "newclear" # Completely wipe out the simulator and rebuild
+
+gem "motion-authentication"
+
+gem "ProMotion-XLForm"
 
 # Optional
 
