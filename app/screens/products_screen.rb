@@ -12,9 +12,12 @@ class ProductsScreen < PM::TableScreen
   def on_load
     set_nav_bar_button :left, title: "Menu", action: :show_menu
 
+
+
     @products = []
     load_products
   end
+
 
   def show_menu
     app_delegate.show_menu
