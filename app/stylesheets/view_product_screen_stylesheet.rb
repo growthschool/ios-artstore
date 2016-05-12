@@ -10,4 +10,13 @@ class ViewProductScreenStylesheet < ApplicationStylesheet
   def root_view(st)
     st.background_color = color.white
   end
+
+  def product_image(st)
+    st.frame = :full
+    st.content_mode = :scale_aspect_fit
+  end
+
+  def root_view(st)
+    st.background_color = color.white
+  end
 end

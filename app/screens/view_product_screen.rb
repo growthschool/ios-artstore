@@ -2,7 +2,10 @@ class ViewProductScreen < PM::Screen
   title "Your title here"
   stylesheet ViewProductScreenStylesheet
 
+  attr_accessor :product
+
   def on_load
+    append(UIImageView, :product_image).style {|st| st.remote_image = product.image_url }
   end
   
 
