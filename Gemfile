@@ -11,7 +11,7 @@ gem "afmotion" # Networking
 # Debugging tools
 gem "newclear" # Completely wipe out the simulator and rebuild
 
-gem "motion-authentication"
+gem "motion-authentication", :github => "xdite/motion-authentication", :branch => "extend_sign_up_feature"
 gem "ProMotion-XLForm"
 
 gem 'ProMotion-menu'

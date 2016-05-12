@@ -6,6 +6,15 @@ GIT
       methadone (~> 1.7)
       motion_print (~> 1.0)
 
+GIT
+  remote: git://github.com/xdite/motion-authentication.git
+  revision: 2bd9d7ec8b9744e5bed4c503153bb82b95dd9a43
+  branch: extend_sign_up_feature
+  specs:
+    motion-authentication (1.0.0)
+      motion-cocoapods
+      motion-keychain
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -72,9 +81,6 @@ GEM
       bundler
     minitest (5.8.4)
     molinillo (0.4.5)
-    motion-authentication (1.0.0)
-      motion-cocoapods
-      motion-keychain
     motion-cocoapods (1.8.0)
       cocoapods (>= 1.0.0)
     motion-keychain (0.0.1)
@@ -118,7 +124,7 @@ DEPENDENCIES
   ProMotion-menu
   afmotion
   cdq
-  motion-authentication
+  motion-authentication!
   motion-cocoapods
   motion-yaml (= 1.4)
   newclear

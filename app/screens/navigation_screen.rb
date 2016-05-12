@@ -10,9 +10,8 @@ class NavigationScreen < PM::TableScreen
         title: sign_in_out_title ,
         action: :sign_in_out_button,
       }, {
-       title: 'ZLAH',
-        action: :swap_center_controller,
-        arguments: HomeScreen       
+       title: 'Sign Up',
+        action: :sign_up_button,
       }
       ]
     }]
@@ -38,11 +37,15 @@ class NavigationScreen < PM::TableScreen
     open SignInScreen
   end
 
+  def sign_up_button
+    open SignUpScreen
+  end
+
   def sign_out_button
     Auth.sign_out do
       app.delegate.open_authenticated_root
     end
-   end
+  end
 
 
   def swap_center_controller(screen_class)
