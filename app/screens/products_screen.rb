@@ -2,9 +2,33 @@ class ProductsScreen < PM::TableScreen
   title "Your title here"
   stylesheet ProductsScreenStylesheet
 
+ 
+
+  def nav_right_button
+    mp 'Right button'
+  end
+
+
   def on_load
+
+    if Auth.signed_in?
+      set_nav_bar_button :right, title: "Logout", action: :sign_out_button
+    else
+      set_nav_bar_button :right, title: "Sign In", action: :sign_in_button
+    end
+
     @products = []
     load_products
+  end
+
+  def sign_out_button
+    Auth.sign_out do
+      open_tab_bar ProductsScreen.new(nav_bar: true)
+    end
+  end
+
+  def sign_in_button
+    open SignInScreen.new(nav_bar: true)
   end
 
 

@@ -25,6 +25,9 @@ class AppDelegate < PM::Delegate
     open_tab_bar ProductsScreen.new(nav_bar: true)
   end
 
+  def open_un_authenticated_root
+    open_tab_bar ProductsScreen.new(nav_bar: true)
+  end
 
   # Remove this if you are only supporting portrait
   def application(application, willChangeStatusBarOrientation: new_orientation, duration: duration)
