@@ -7,18 +7,16 @@ class AppDelegate < PM::Delegate
   # Remove this if you aren't using StandardAppearance
   ApplicationStylesheet.new(nil).application_setup
 
-  # def on_load(app, options)
-  #   cdq.setup # Remove this if you aren't using CDQ
-  #   if Auth.signed_in?
-  #     ApiClient.update_authorization_header(Auth.authorization_header)
-  #     open_authenticated_root
-  #   else
-  #     open SignInScreen.new(nav_bar: true)
-  #   end
-  # end
+  def on_load(app, options)
+    cdq.setup # Remove this if you aren't using CDQ
+    if Auth.signed_in?
+      ApiClient.update_authorization_header(Auth.authorization_header)
+      open_authenticated_root
+    end
+  end
 
   def on_load(app, options)
-    open SignInScreen.new(nav_bar: true)
+    open_tab_bar ProductsScreen.new(nav_bar: true)
   end
 
   def open_authenticated_root
