@@ -10,15 +10,14 @@ class ProductsScreen < PM::TableScreen
 
 
   def on_load
-
-    if Auth.signed_in?
-      set_nav_bar_button :right, title: "Logout", action: :sign_out_button
-    else
-      set_nav_bar_button :right, title: "Sign In", action: :sign_in_button
-    end
+    set_nav_bar_button :left, title: "Menu", action: :show_menu
 
     @products = []
     load_products
+  end
+
+  def show_menu
+    app_delegate.show_menu
   end
 
   def sign_out_button
