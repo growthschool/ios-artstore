@@ -8,8 +8,7 @@ class AppDelegate < PM::Delegate
   ApplicationStylesheet.new(nil).application_setup
 
   def on_load(app, options)
-    cdq.setup # Remove this if you aren't using CDQ
-    open HomeScreen.new(nav_bar: true)
+    open_tab_bar ProductsScreen.new(nav_bar: true)
   end
 
   # Remove this if you are only supporting portrait
