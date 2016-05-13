@@ -1,17 +1,23 @@
 class NavigationScreen < PM::TableScreen
-  title "Your title here"
-  stylesheet NavigationScreenStylesheet
+
+  def on_load
+    rmq.stylesheet = NavigationScreenStylesheet
+    rmq(self.view).apply_style(:table)
+
+  end
+
 
   def table_data
 
     [{
-      title: 'MENU',
-      cells: [{
-        title: sign_in_out_title ,
-        action: :sign_in_out_button,
-      }, {
-       title: 'Sign Up',
-        action: :sign_up_button,
+      title: nil,
+      cells: [
+        { title: '' },
+        { title: sign_in_out_title ,
+          action: :sign_in_out_button,
+        }, 
+        { title: 'Sign Up',
+          action: :sign_up_button,
       }
       ]
     }]

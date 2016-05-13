@@ -4,19 +4,10 @@ class ProductsScreen < PM::TableScreen
 
   title "Your title here"
   stylesheet ProductsScreenStylesheet
-
+  
  
-
-  def nav_right_button
-    mp 'Right button'
-  end
-
-
   def on_load
-#    set_nav_bar_button :left, title: "Menu", action: :show_menu
     add_side_menu
-
-
     @products = []
     load_products
   end
