@@ -2,10 +2,7 @@ class NavigationScreen < PM::TableScreen
 
   def on_load
     rmq.stylesheet = NavigationScreenStylesheet
-    rmq(self.view).apply_style(:table)
-
   end
-
 
   def table_data
 

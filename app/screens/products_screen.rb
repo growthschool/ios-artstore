@@ -41,11 +41,16 @@ class ProductsScreen < PM::TableScreen
     [{
       cells: @products.map do |product|
         {
-          height: 100,
-          title: product.title,
-          remote_image: {
-            url: product.image_url,
+
+          cell_class: ProductCell,
+          properties: {
+            title: product.title,
           },
+          height: 100,
+#          title: product.title,
+#          remote_image: {
+#            url: product.image_url,
+#          },
           action: :view_product,
           arguments: { product: product }
         }
