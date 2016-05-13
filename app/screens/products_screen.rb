@@ -2,7 +2,7 @@ class ProductsScreen < PM::TableScreen
   
   include Navigation
 
-  title "Your title here"
+  title "最新上架"
   stylesheet ProductsScreenStylesheet
   
  
@@ -45,12 +45,9 @@ class ProductsScreen < PM::TableScreen
           cell_class: ProductCell,
           properties: {
             title: product.title,
+            image_url: product.image_url
           },
           height: 100,
-#          title: product.title,
-#          remote_image: {
-#            url: product.image_url,
-#          },
           action: :view_product,
           arguments: { product: product }
         }

@@ -45,7 +45,7 @@ class ApplicationStylesheet < RubyMotionQuery::Stylesheet
   end  
 
   def right_chevron(st)
-    st.frame = {top: 25, left: device_width - 20, width: 20, height: 20}
+    st.frame = {top: 30, left: device_width - 20, width: 20, height: 20}
     st.color = color.light_gray
     st.font = FontAwesome.fontWithSize(18.0)
     st.view.text = FontAwesome.icon('chevron-right')
