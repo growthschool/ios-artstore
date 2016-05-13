@@ -23,8 +23,13 @@ class ApplicationStylesheet < RubyMotionQuery::Stylesheet
     color.add_named :tint, '236EB7'
     color.add_named :translucent_black, color(0, 0, 0, 0.4)
     color.add_named :battleship_gray,   '#7F7F7F'
-
+    color.add_named :background_gray,   '#EFEFF4'
+    
     StandardAppearance.apply app.window
+  end
+
+  def root_scroll_view(st)
+    st.background_color = color.background_gray
   end
 
   def standard_button(st)

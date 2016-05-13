@@ -5,7 +5,18 @@ class ViewProductScreen < PM::Screen
   attr_accessor :product
 
   def on_load
-    append(UIImageView, :product_image).style {|st| st.remote_image = product.image_url }
+
+    @layout = ProductShowLayout.new
+    self.view = @layout.view
+    @layout.add_constraints
+
+    @title = @layout.get(:product_title)
+    @title.text = @product.title
+
+    @image = @layout.get(:product_image)
+    @image.remote_image = product.image_url
+
+
 
     set_toolbar_items [{
         title: icon_image(:awesome, :shopping_cart, size: 20) ,

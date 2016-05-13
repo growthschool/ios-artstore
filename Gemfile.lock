@@ -72,6 +72,7 @@ GEM
       netrc (= 0.7.8)
     cocoapods-try (1.0.0)
     colored (1.2)
+    dbt (1.1.5)
     escape (0.0.4)
     fourflusher (0.3.0)
     fuzzy_match (2.0.4)
@@ -89,6 +90,8 @@ GEM
       rake
     motion-keychain (0.0.1)
       motion-cocoapods (>= 1.4.1)
+    motion-kit (0.17.0)
+      dbt (~> 1.1.5)
     motion-require (0.2.0)
     motion-yaml (1.4)
     motion_print (1.2.0)
@@ -132,6 +135,7 @@ DEPENDENCIES
   motion-authentication!
   motion-cocoapods
   motion-fontawesome
+  motion-kit
   motion-yaml (= 1.4)
   newclear
   rake

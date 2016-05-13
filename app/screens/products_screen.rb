@@ -41,7 +41,6 @@ class ProductsScreen < PM::TableScreen
     [{
       cells: @products.map do |product|
         {
-
           cell_class: ProductCell,
           properties: {
             title: product.title,
