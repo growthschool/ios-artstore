@@ -17,15 +17,17 @@ class AppDelegate < PM::Delegate
     
   end
 
+  def open_authenticated_root
+    open_tab_bar ProductsScreen.new(nav_bar: true)
+    @menu = open MenuDrawer
+  end
+  
   def show_menu
     @menu.show :left
   end
 
 
-  def open_authenticated_root
-    open_tab_bar ProductsScreen.new(nav_bar: true)
-    @menu = open MenuDrawer
-  end
+
 
   def open_un_authenticated_root
     open_tab_bar ProductsScreen.new(nav_bar: true)

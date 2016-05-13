@@ -85,6 +85,8 @@ GEM
       motion-cocoapods
     motion-cocoapods (1.8.0)
       cocoapods (>= 1.0.0)
+    motion-fontawesome (0.0.1)
+      rake
     motion-keychain (0.0.1)
       motion-cocoapods (>= 1.4.1)
     motion-require (0.2.0)
@@ -129,10 +131,8 @@ DEPENDENCIES
   moticons
   motion-authentication!
   motion-cocoapods
+  motion-fontawesome
   motion-yaml (= 1.4)
   newclear
   rake
   redpotion
-
-BUNDLED WITH
-   1.12.3

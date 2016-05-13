@@ -15,7 +15,7 @@ gem "motion-authentication", :github => "xdite/motion-authentication", :branch =
 gem "ProMotion-XLForm"
 
 gem 'ProMotion-menu'
-
+gem 'motion-fontawesome'
 gem 'moticons'
 
 # Optional
