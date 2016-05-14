@@ -17,9 +17,8 @@ class ViewProductScreen < PM::Screen
     @image.remote_image = product.image_url
 
 
-
     set_toolbar_items [{
-        title: icon_image(:awesome, :shopping_cart, size: 20) ,
+        title: icon_image(:awesome, :plus, size: 20),
         action: :some_action
       }, {
         system_item: :flexible_space
@@ -28,6 +27,7 @@ class ViewProductScreen < PM::Screen
         action: :some_other_action
     }]
 
+    set_nav_bar_button :right, title: icon_image(:awesome, :shopping_cart, size: 20) , action: :nav_right_button
   end
 
   def some_action
