@@ -37,11 +37,11 @@ class NavigationScreen < PM::TableScreen
   end
 
   def sign_in_button
-    open SignInScreen.new(nav_bar: true)
+    open Account::SignInScreen.new(nav_bar: true)
   end
 
   def sign_up_button
-    open SignUpScreen.new(nav_bar: true)
+    open Account::SignUpScreen.new(nav_bar: true)
   end
 
   def sign_out_button
