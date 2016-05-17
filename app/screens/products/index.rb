@@ -56,7 +56,7 @@ module Products
     end
   
     def view_product(args)
-      open ViewProductScreen.new(args)
+      open Products::ShowScreen.new(args)
     end
   
     # You don't have to reapply styles to all UIViews, if you want to optimize, another way to do it
