@@ -17,7 +17,7 @@ class ViewProductScreenStylesheet < ApplicationStylesheet
 
 
   def product_title(st)
-    st.frame = {top: 10, width: app_width - 40, height: 0, left: 20}
+    st.frame = {top: 10, width: device_width - 40, height: 0, left: 20}
     st.color = color.battleship_gray
     st.view.lineBreakMode = UILineBreakModeWordWrap
     st.view.numberOfLines = 0

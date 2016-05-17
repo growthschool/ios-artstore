@@ -27,8 +27,6 @@ class AppDelegate < PM::Delegate
   end
 
 
-
-
   def open_un_authenticated_root
     open_tab_bar ProductsScreen.new(nav_bar: true)
   end

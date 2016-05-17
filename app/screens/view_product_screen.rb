@@ -19,7 +19,7 @@ class ViewProductScreen < PM::Screen
 
     set_toolbar_items [{
         title: icon_image(:awesome, :plus, size: 20),
-        action: :some_action
+        action: :add_to_cart
       }, {
         system_item: :flexible_space
       }, {
@@ -27,10 +27,21 @@ class ViewProductScreen < PM::Screen
         action: :some_other_action
     }]
 
-    set_nav_bar_button :right, title: icon_image(:awesome, :shopping_cart, size: 20) , action: :nav_right_button
+    set_nav_bar_buttons :right, [{
+      custom_view: my_custom_view_button,
+      action: :nav_right_button
+    }]
+
+  #  set_nav_bar_button :right, title: icon_image(:awesome, :shopping_cart, size: 20) , action: :nav_right_button
   end
 
-  def some_action
+  def my_custom_view_button
+    @shopping_car_icon ||= rmq.append(UIImageView, :shopping_cart_icon)
+    @shopping_car_icon.data = icon_image(:awesome, :shopping_cart, size: 20)
+  end
+
+  def add_to_cart
+    rmq.find(:shopping_cart_icon).hide
   end
 
   def some_other_action

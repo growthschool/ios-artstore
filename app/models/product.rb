@@ -17,4 +17,14 @@ class Product
     end
   end
 
+  def self.add_do_cart(&callback)
+    ApiClient.client.post "carts" do |response|
+      models = []
+      if response.success?
+        models = response.object["list"].map {|data| new(data) }
+      end
+      callback.call(response, models)
+    end
+  end
+
 end
