@@ -1,11 +1,12 @@
 class ViewProductScreen < PM::Screen
-  title "Your title here"
   stylesheet ViewProductScreenStylesheet
 
   attr_accessor :product
 
   def on_load
 
+    self.title = @product.title
+    
     @layout = ProductShowLayout.new
     self.view = @layout.view
     @layout.add_constraints
