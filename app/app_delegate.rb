@@ -18,7 +18,7 @@ class AppDelegate < PM::Delegate
   end
 
   def open_authenticated_root
-    open_tab_bar ProductsScreen.new(nav_bar: true)
+    open_tab_bar Products::IndexScreen.new(nav_bar: true)
     @menu = open MenuDrawer
   end
   
@@ -28,7 +28,7 @@ class AppDelegate < PM::Delegate
 
 
   def open_un_authenticated_root
-    open_tab_bar ProductsScreen.new(nav_bar: true)
+    open_tab_bar Products::IndexScreen.new(nav_bar: true)
   end
 
   # Remove this if you are only supporting portrait

@@ -1,7 +1,7 @@
 class MenuDrawer < PM::Menu::Drawer
 
   def setup
-    self.center = ProductsScreen.new(nav_bar: true)
+    self.center = Products::IndexScreen.new(nav_bar: true)
     self.left = NavigationScreen
     self.to_show = [:pan_bezel, :pan_center]
     self.transition_animation = :slide
