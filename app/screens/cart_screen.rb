@@ -1,9 +1,9 @@
-class CartScreen <  PM::DataTableScreen
+class CartScreen < PM::DataTableScreen
   title "Shopping Cart"
   stylesheet CartScreenStylesheet
 
   model CartItem
-  
+
   def on_load
   end
   

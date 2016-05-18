@@ -34,7 +34,7 @@ module Products
         action: :show_shopping_cart
       }]
 
-      mp MotionKeychain.get(:auth_token)
+   
   
     #  set_nav_bar_button :right, title: icon_image(:awesome, :shopping_cart, size: 20) , action: :nav_right_button
     end
@@ -44,17 +44,22 @@ module Products
       @shopping_car_icon.data = icon_image(:awesome, :shopping_cart, size: 20)
     end
   
+    #def add_to_cart
+#
+    #  Product.add_to_cart(product.id) do |response, product_object|
+    #    if response.success?
+    #      app.alert("Success #{product.id}")
+    #    else
+    #      app.alert "Sorry, there was an error fetching the products."
+    #      mp response.error.localizedDescription
+    #    end
+    #  end
+#
+    #end
+
     def add_to_cart
-
-      Product.add_to_cart(product.id) do |response, product_object|
-        if response.success?
-          app.alert("Success #{product.id}")
-        else
-          app.alert "Sorry, there was an error fetching the products."
-          mp response.error.localizedDescription
-        end
-      end
-
+      CartItem.create(:product_name => @product.title )
+      cdq.save
     end
   
     def show_shopping_cart

@@ -9,8 +9,8 @@ class CartItem < CDQManagedObject
   def cell
     {
       # Use the model's properties to populate data in the hash
-      title: name,
-      subtitle: "Something else: #{something_else}"
+      title: product_name,
+#      subtitle: "Something else: #{something_else}"
     }
   end
 end
