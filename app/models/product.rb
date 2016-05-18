@@ -1,5 +1,5 @@
 class Product
-  attr_accessor :id, :title, :image_url
+  attr_accessor :id, :title, :image_url, :price
 
   def initialize(data)
     @id = data["id"]
