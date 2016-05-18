@@ -31,7 +31,7 @@ module Products
   
       set_nav_bar_buttons :right, [{
         custom_view: my_custom_view_button,
-        action: :nav_right_button
+        action: :show_shopping_cart
       }]
 
       mp MotionKeychain.get(:auth_token)
@@ -57,6 +57,10 @@ module Products
 
     end
   
+    def show_shopping_cart
+      open CartScreen.new(nav_bar: true)
+    end
+
     def some_other_action
     end
   

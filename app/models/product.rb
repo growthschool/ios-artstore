@@ -23,7 +23,6 @@ class Product
       model = nil
       if response.success?
         model = new(response.object["product"])
-        #models = response.object["list"].map {|data| new(data) }
       end
       callback.call(response, model)
     end
