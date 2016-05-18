@@ -15,7 +15,8 @@ class NavigationScreen < PM::TableScreen
         }, 
         { title: 'Sign Up',
           action: :sign_up_button,
-      }
+        },
+        { title: "Add Credit Card", action: :add_credit_card_action }
       ]
     }]
   end
@@ -48,6 +49,10 @@ class NavigationScreen < PM::TableScreen
     Auth.sign_out do
       app.delegate.open_authenticated_root
     end
+  end
+
+  def add_credit_card_action
+    open AddCreditCardScreen.new(nav_bar: true)
   end
 
 
