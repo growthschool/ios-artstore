@@ -18,10 +18,11 @@ class Product
   end
 
   def self.add_to_cart(product_id,&callback)
-    ApiClient.client.post("/products/add_to_cart", :product_id => product_id ) do |response|
-      model = response.object["product"]
+    ApiClient.client.post("/products/add_to_cart", :token => MotionKeychain.get(:auth_token), :product_id => product_id ) do |response|
+   
+      model = nil
       if response.success?
-        model = new(model)
+        model = new(response.object["product"])
         #models = response.object["list"].map {|data| new(data) }
       end
       callback.call(response, model)
