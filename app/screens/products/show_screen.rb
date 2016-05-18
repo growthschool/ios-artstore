@@ -61,7 +61,7 @@ module Products
     #end
 
     def add_to_cart
-      CartItem.create(:product_name => @product.title )
+      CartItem.create(:product_name => @product.title, :product_price => @product.price, :product_id => @product.id )
       cdq.save
        app.alert("成功將 #{product.title} 加入購物車")
     end
