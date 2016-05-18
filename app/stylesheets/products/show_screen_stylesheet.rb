@@ -25,7 +25,11 @@ module Products
       st.view.numberOfLines = 0
       st.view.sizeToFit
     end
-  
+
+    def shopping_cart_icon(st)  
+      st.color = color.white
+    end
+    
   end
   
 

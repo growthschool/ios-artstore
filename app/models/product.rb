@@ -17,13 +17,14 @@ class Product
     end
   end
 
-  def self.add_do_cart(&callback)
-    ApiClient.client.post "carts" do |response|
-      models = []
+  def self.add_to_cart(product_id,&callback)
+    ApiClient.client.post("/products/add_to_cart", :product_id => product_id ) do |response|
+      model = response.object["product"]
       if response.success?
-        models = response.object["list"].map {|data| new(data) }
+        model = new(model)
+        #models = response.object["list"].map {|data| new(data) }
       end
-      callback.call(response, models)
+      callback.call(response, model)
     end
   end
 

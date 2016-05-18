@@ -21,7 +21,7 @@ module Products
   
       set_toolbar_items [{
           title: icon_image(:awesome, :plus, size: 20),
-          action: :add_to_cart
+          action: :add_to_cart,
         }, {
           system_item: :flexible_space
         }, {
@@ -33,6 +33,8 @@ module Products
         custom_view: my_custom_view_button,
         action: :nav_right_button
       }]
+
+      mp MotionKeychain.get(:auth_token)
   
     #  set_nav_bar_button :right, title: icon_image(:awesome, :shopping_cart, size: 20) , action: :nav_right_button
     end
@@ -43,7 +45,16 @@ module Products
     end
   
     def add_to_cart
-      rmq.find(:shopping_cart_icon).hide
+
+      Product.add_to_cart(product.id) do |response, product_object|
+        if response.success?
+          app.alert("Success #{product.id}")
+        else
+          app.alert "Sorry, there was an error fetching the products."
+          mp response.error.localizedDescription
+        end
+      end
+
     end
   
     def some_other_action
