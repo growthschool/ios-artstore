@@ -17,6 +17,14 @@ class CartScreen < PM::DataTableScreen
     cdq.save
   end
 
+  def on_cell_deleted(cell, index_path)
+    mp index_path
+    CartItem.all[index_path.row].destroy
+    # TODO: desc 要另外處理，否則會刪錯
+    cdq.save
+    false
+  end
+
   # You don't have to reapply styles to all UIViews, if you want to optimize, another way to do it
   # is tag the views you need to restyle in your stylesheet, then only reapply the tagged views, like so:
   #   def logo(st)
