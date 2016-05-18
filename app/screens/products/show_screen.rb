@@ -63,6 +63,7 @@ module Products
     def add_to_cart
       CartItem.create(:product_name => @product.title )
       cdq.save
+       app.alert("成功將 #{product.title} 加入購物車")
     end
   
     def show_shopping_cart
