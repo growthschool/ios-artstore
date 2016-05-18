@@ -13,9 +13,6 @@ module Products
       st.background_color = color.white
     end
   
-    def root_view(st)
-      st.background_color = color.white
-    end
   
   
     def product_title(st)
@@ -27,7 +24,6 @@ module Products
     end
 
     def shopping_cart_icon(st)  
-      st.color = color.white
     end
     
   end

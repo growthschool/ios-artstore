@@ -19,7 +19,8 @@ module Products
       @image.remote_image = product.image_url
 
 
-  
+      @price = @layout.get(:product_price)
+      @price.text = "NTD $#{@product.price.to_s}"
   
       set_toolbar_items [{
           title: icon_image(:awesome, :plus, size: 20),

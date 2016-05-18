@@ -69,7 +69,7 @@ class ProductShowLayout < MK::Layout
     end
 
     constraints(:product_price) do
-      top_left x: 20, y: 10
+      top_left x: 20 , y: 420
       width.equals(view).minus(40)
     end
 

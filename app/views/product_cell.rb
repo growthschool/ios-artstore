@@ -13,6 +13,8 @@ class ProductCell < PM::TableViewCell
   def price=(price)
     @price_view ||= rmq.append(UILabel, :product_price)
     @price_view.data = "$#{price.to_s}"
+
+    # price is integer, will case crash
   end
 
 
