@@ -45,6 +45,7 @@ module Products
             cell_class: ProductCell,
             properties: {
               title: product.title,
+              price: product.price,
               image_url: product.image_url
             },
             height: 100,

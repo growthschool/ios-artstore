@@ -6,7 +6,15 @@ class ProductCell < PM::TableViewCell
 
 
     @right_chevron ||= rmq.append(UILabel, :right_chevron)
+
+    
   end
+
+  def price=(price)
+    @price_view ||= rmq.append(UILabel, :product_price)
+    @price_view.data = "$#{price.to_s}"
+  end
+
 
   def image_url=(url)
     @image_view = rmq.append(UIImageView, :product_thumb).style {|st| st.remote_image = url }

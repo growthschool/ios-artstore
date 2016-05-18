@@ -20,7 +20,15 @@ module Products
       st.view.lineBreakMode = 0
       st.view.numberOfLines = 0
     end  
-  
+
+    def product_price(st)
+      st.frame = {top: 25, left: device_width - 70 , width: 40 , height: 36}
+      st.color = color.battleship_gray
+      st.font = font.small
+      st.view.lineBreakMode = 0
+      st.view.numberOfLines = 0
+    end  
+
     def product_thumb(st)   
       st.frame = { top: 10, left: 10 , width: 60, height: 60}
       st.background_color = color.black

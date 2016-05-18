@@ -17,6 +17,8 @@ module Products
   
       @image = @layout.get(:product_image)
       @image.remote_image = product.image_url
+
+
   
   
       set_toolbar_items [{

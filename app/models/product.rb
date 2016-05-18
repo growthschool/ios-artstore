@@ -5,6 +5,7 @@ class Product
     @id = data["id"]
     @title = data["title"]
     @image_url = data["image_url"]
+    @price = data["price"]
   end
 
   def self.all(&callback)
