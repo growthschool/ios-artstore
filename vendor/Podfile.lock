@@ -51,6 +51,9 @@ PODS:
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
+  - Stripe (7.0.1):
+    - Stripe/Core (= 7.0.1)
+  - Stripe/Core (7.0.1)
   - UICKeyChainStore (2.1.0)
   - XLForm (3.1.1)
 
@@ -60,6 +63,7 @@ DEPENDENCIES:
   - MMDrawerController (~> 0.5)
   - RSColorPicker
   - SDWebImage
+  - Stripe
   - UICKeyChainStore
   - XLForm (from `https://github.com/xmartlabs/XLForm.git`)
 
@@ -78,9 +82,10 @@ SPEC CHECKSUMS:
   MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
   RSColorPicker: 4d71e12f8e28d44c3885fbb3ba10bc3627bdb393
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  Stripe: b92298b31cf156fb23a029361b57e2fcb6583d57
   UICKeyChainStore: f1cbd42216a113f0165de1e733e62905b8823432
   XLForm: c9ee7e0f859341279bfd894f9589a9d25c23e4df
 
-PODFILE CHECKSUM: cbd7aa31ddc1121d60861054bd064848c5e4ec7d
+PODFILE CHECKSUM: 83797030219b48e694f575b3924762d6c397c2dc
 
 COCOAPODS: 1.0.0

@@ -2,9 +2,28 @@ class AddCreditCardScreen < PM::Screen
   title "新增信用卡"
   stylesheet AddCreditCardScreenStylesheet
 
+  attr_accessor :paymentView
+
   def on_load
+
+    @paymentView = STPPaymentCardTextField.alloc.initWithFrame(CGRectMake(15, 85, 290, 55))
+    @paymentView.delegate = self
+    self.view.addSubview @paymentView
+
+    set_nav_bar_buttons :right, [{
+      title: "Save",
+      action: :save_card_action
+    }]
+
+  end
+
+  def save_card_action
+    if @paymentView.card
+      mp @paymentView.card.number
+    end
   end
   
+
 
   # You don't have to reapply styles to all UIViews, if you want to optimize, another way to do it
   # is tag the views you need to restyle in your stylesheet, then only reapply the tagged views, like so:

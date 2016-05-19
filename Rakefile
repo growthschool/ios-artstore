@@ -47,6 +47,7 @@ Motion::Project::App.setup do |app|
 
   app.pods do
     pod 'SDWebImage'
+    pod 'Stripe'
   #   pod 'JGProgressHUD'
   #   pod 'SVProgressHUD'
   #   pod "FontasticIcons"

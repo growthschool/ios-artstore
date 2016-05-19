@@ -53,6 +53,8 @@ class NavigationScreen < PM::TableScreen
 
   def add_credit_card_action
     open AddCreditCardScreen.new(nav_bar: true)
+#    open PaymentViewController.new
+#    mp StripeConnection.connectionWithPublishableKey("pk_test_APfRAnKNxAO78IG481nvbXqq")
   end
 
 
