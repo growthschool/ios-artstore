@@ -3,17 +3,24 @@ class AddCreditCardScreen < PM::Screen
   stylesheet AddCreditCardScreenStylesheet
 
   def on_load
+
     @paymentView = STPPaymentCardTextField.alloc.initWithFrame(CGRectMake(15, 85, 290, 40 ))
     @paymentView.delegate = self
     self.view.addSubview @paymentView
 
-    set_nav_bar_buttons :right, [{
-      title: "Save",
-      action: :save_card_action
-    }]
+
+     set_nav_bar_button :left, title: "Cancel" , action: :cancel_back_home
+     set_nav_bar_button :right, title: "Save", action: :save_card_action
+
+
 
     # Refactor to PM::Screen style
   end
+
+  def cancel_back_home
+    app.delegate.open_authenticated_root
+  end
+
 
   def save_card_action
     if @paymentView.card

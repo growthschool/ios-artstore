@@ -12,6 +12,6 @@ class AddCreditCardScreenStylesheet < ApplicationStylesheet
   end
 
   def card_field(st)
-    st.frame = { top: 15, left: 15, width: screen_width - 30, height: 44 }
+    st.frame = { top: 15, left: 28, width: 290, height: 40 }
   end
 end
