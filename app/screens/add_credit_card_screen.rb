@@ -9,8 +9,8 @@ class AddCreditCardScreen < PM::Screen
     self.view.addSubview @paymentView
 
 
-     set_nav_bar_button :left, title: "Cancel" , action: :cancel_back_home
-     set_nav_bar_button :right, title: "Save", action: :save_card_action
+    set_nav_bar_button :left, title: "Cancel" , action: :cancel_back_home
+    set_nav_bar_button :right, title: "Save", action: :save_card_action
 
 
 
