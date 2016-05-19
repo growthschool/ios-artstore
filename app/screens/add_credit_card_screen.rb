@@ -2,11 +2,8 @@ class AddCreditCardScreen < PM::Screen
   title "新增信用卡"
   stylesheet AddCreditCardScreenStylesheet
 
-  attr_accessor :paymentView
-
   def on_load
-
-    @paymentView = STPPaymentCardTextField.alloc.initWithFrame(CGRectMake(15, 85, 290, 55))
+    @paymentView = STPPaymentCardTextField.alloc.initWithFrame(CGRectMake(15, 85, 290, 40 ))
     @paymentView.delegate = self
     self.view.addSubview @paymentView
 
@@ -15,12 +12,14 @@ class AddCreditCardScreen < PM::Screen
       action: :save_card_action
     }]
 
+    # Refactor to PM::Screen style
   end
 
   def save_card_action
     if @paymentView.card
       mp @paymentView.card.number
     end
+  
   end
   
 
