@@ -6,8 +6,10 @@ class Card
     @token = data["token"]
   end
 
-  def self.create(&callback)
-    ApiClient.client.post("/cards", :token => MotionKeychain.get(:auth_token) ) do |response|
+  def self.create(number,&callback)
+    ApiClient.client.post("/cards", 
+      :token => MotionKeychain.get(:auth_token), :number => number.to_s ,
+    ) do |response|
       model = nil
       if response.success?
         model = new(response.object)

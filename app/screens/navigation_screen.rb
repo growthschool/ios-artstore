@@ -16,9 +16,15 @@ class NavigationScreen < PM::TableScreen
         { title: 'Sign Up',
           action: :sign_up_button,
         },
-        { title: "Add Credit Card", action: :add_credit_card_action }
+        add_credit_card_menu
       ]
     }]
+  end
+
+  def add_credit_card_menu
+    if Auth.signed_in?
+      { title: "Add Credit Card", action: :add_credit_card_action }
+    end
   end
 
   def sign_in_out_title
