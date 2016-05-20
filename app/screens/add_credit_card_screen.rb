@@ -25,6 +25,15 @@ class AddCreditCardScreen < PM::Screen
   def save_card_action
     if @paymentView.card
       mp @paymentView.card.number
+      Card.create() do |response, card_object|
+        if response.success?
+          mp card_object
+          app.alert("Success #{card_object.token}")
+        else
+          app.alert "Sorry, there was an error fetching the card."
+          mp response.error.localizedDescription
+        end
+      end
     end
   
   end
