@@ -38,6 +38,7 @@ module Products
 
 
     def favorite_icon(st)
+      st.data = icon_image(:awesome, :heart_o, size: 20)
     end
 
   end

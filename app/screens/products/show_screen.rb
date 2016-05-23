@@ -33,10 +33,16 @@ module Products
         action: :show_shopping_cart
       }]
  
+
   
     end
 
 
+
+
+    def favorite_this_product
+
+    end
 
     def custom_favorite
       @favorite_icon ||= rmq.append(UIImageView, :favorite_icon)
