@@ -28,10 +28,16 @@ module Products
     def shopping_cart_icon(st)  
     end
     
+    def add_to_cart_icon(st)
+    end
 
     def product_price(st)
       st.frame = { top: 420, left: 20, width: 100, height: 30}
       st.color = color.black
+    end
+
+
+    def favorite_icon(st)
     end
 
   end

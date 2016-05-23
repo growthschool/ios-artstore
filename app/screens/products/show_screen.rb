@@ -25,17 +25,18 @@ module Products
           system_item: :flexible_space
         }, {
           custom_view: custom_favorite ,
-          action: :some_other_action
+          action: :favorite_this_product
       }]
   
       set_nav_bar_buttons :right, [{
         custom_view: custom_shopping_cart ,
         action: :show_shopping_cart
       }]
-
+ 
   
-    #  set_nav_bar_button :right, title: icon_image(:awesome, :shopping_cart, size: 20) , action: :nav_right_button
     end
+
+
 
     def custom_favorite
       @favorite_icon ||= rmq.append(UIImageView, :favorite_icon)
