@@ -14,14 +14,15 @@ module Products
     end
   
   
+    def product_image(st)
+
+      st.frame = { top: 200, left: 10 , width: 200, height: 200}
+      st.background_color = color.black
+    end
   
     def product_title(st)
-      st.frame = {top: 10, width: device_width - 40, height: 0, left: 20}
-      st.color = color.battleship_gray
-      st.view.lineBreakMode = UILineBreakModeWordWrap
-      st.view.numberOfLines = 0
-      st.view.sizeToFit
-      st.text = 'Hello World'
+      st.frame = { top: 100, left: 20, width: 100, height: 30}
+      st.color = color.black
     end
 
     def shopping_cart_icon(st)  

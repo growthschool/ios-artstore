@@ -8,24 +8,15 @@ module Products
   
       self.title = @product.title
       
+
+      @title = append!(UILabel, :product_title)
+      @title.text = @product.title
+
+      @image = append!(UIImageView, :product_image).style {|st| st.remote_image = @product.image_url }
+
       @price = append!(UILabel, :product_price)
       @price.text = "NTD $#{@product.price.to_s}"
 
-    # = append!(UILabel, :hello_world)
-
-#      @layout = ProductShowLayout.new
- #     self.view = @layout.view
- #     @layout.add_constraints
-  
-     # @title = @layout.get(:product_title)
-     # @title.text = @product.title
-  
-      #@image = @layout.get(:product_image)
-     # @image.remote_image = product.image_url
-
-
-    #  @price = @layout.get(:product_price)
-   #   @price.text = "NTD $#{@product.price.to_s}"
   
       set_toolbar_items [{
           title: icon_image(:awesome, :plus, size: 20),
