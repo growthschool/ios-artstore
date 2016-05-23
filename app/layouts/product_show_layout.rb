@@ -20,12 +20,7 @@ class ProductShowLayout < MK::Layout
             size_to_fit
           end
 
-          add UILabel, :product_price do 
-            color rmq.color.black
-            font rmq.font.small
-            target.numberOfLines = 0
-            size_to_fit
-          end
+
 
 
         end      
@@ -67,12 +62,6 @@ class ProductShowLayout < MK::Layout
       height 300
       width 300
     end
-
-    constraints(:product_price) do
-      top_left x: 20 , y: 420
-      width.equals(view).minus(40)
-    end
-
 
   end  
 

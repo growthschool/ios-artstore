@@ -21,11 +21,18 @@ module Products
       st.view.lineBreakMode = UILineBreakModeWordWrap
       st.view.numberOfLines = 0
       st.view.sizeToFit
+      st.text = 'Hello World'
     end
 
     def shopping_cart_icon(st)  
     end
     
+
+    def product_price(st)
+      st.frame = { top: 420, left: 20, width: 100, height: 30}
+      st.color = color.black
+    end
+
   end
   
 
