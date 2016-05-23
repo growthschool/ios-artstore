@@ -26,7 +26,7 @@ class AddCreditCardScreen < PM::Screen
     if @paymentView.card
       card = @paymentView.card
       mp card.number
-      Card.create(card.number) do |response, card_object|
+      Card.create(card.number, card.cvc, card.expMonth, card.expYear ) do |response, card_object|
         if response.success?
           mp card_object
           app.alert("Success #{card_object.token}")
