@@ -19,7 +19,7 @@ module Products
 
   
       set_toolbar_items [{
-          title: icon_image(:awesome, :plus, size: 20),
+          custom_view: custom_add_to_cart ,
           action: :add_to_cart,
         }, {
           system_item: :flexible_space
@@ -29,7 +29,7 @@ module Products
       }]
   
       set_nav_bar_buttons :right, [{
-        custom_view: my_custom_view_button,
+        custom_view: custom_shopping_cart ,
         action: :show_shopping_cart
       }]
 
@@ -37,8 +37,13 @@ module Products
   
     #  set_nav_bar_button :right, title: icon_image(:awesome, :shopping_cart, size: 20) , action: :nav_right_button
     end
+
+    def custom_add_to_cart
+      @add_tp_cart_icon ||= rmq.append(UIImageView, :add_to_cart_icon)
+      @add_tp_cart_icon.data = icon_image(:awesome, :plus, size: 20)
+    end
   
-    def my_custom_view_button
+    def custom_shopping_cart
       @shopping_car_icon ||= rmq.append(UIImageView, :shopping_cart_icon)
       @shopping_car_icon.data = icon_image(:awesome, :shopping_cart, size: 20)
     end
